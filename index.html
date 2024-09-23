@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Finance & Investment Banking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <h2>Finance Student & Aspiring Investment Banker</h2>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I’m a finance student at American University, focused on investment banking. Below is a summary of my LinkedIn profile and some of my latest projects.</p>
+        <div id="linkedin-info">
+            <!-- LinkedIn data will load here via JavaScript -->
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <h3>Stock Price Alert System</h3>
+        <p>I built a Python-based stock price alert system that sends email notifications when certain thresholds are crossed. You can check out the code <a href="https://github.com/yourusername/stock-alert" target="_blank">here</a> or see the example code below:</p>
+        <pre><code>
+import yfinance as yf
+import smtplib
+from time import sleep
+
+def send_email_alert(stock_symbol, current_price):
+    subject = f"Price Alert for {stock_symbol}"
+    body = f"The price of {stock_symbol} has reached {current_price}!"
+    message = f"Subject: {subject}\n\n{body}"
+    # SMTP server setup and email sending logic here...
+
+def check_stock_price(stock_symbol, target_price):
+    stock = yf.Ticker(stock_symbol)
+    stock_info = stock.history(period="1d")
+    current_price = stock_info['Close'][0]
+    # Check stock price and send alert...
+        </code></pre>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: randres456@outlook.com</p>
+        <p>LinkedIn: <a href="www.linkedin.com/in/rodolfo-andres-mejia-49a350285" target="_blank">My LinkedIn Profile</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
